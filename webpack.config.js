@@ -16,11 +16,6 @@ const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 process.env.BABEL_ENV = TARGET;
 
 var common = {
-  entry: APP_PATH,
-  output: {
-    path: BUILD_PATH,
-    filename: 'bundle.js',
-  },
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
@@ -29,6 +24,11 @@ var common = {
 if(TARGET === 'start' || !TARGET) {
 
   module.exports = merge(common, {
+    entry: APP_PATH,
+    output: {
+      path: BUILD_PATH,
+      filename: 'bundle.js',
+    },
     devtool: 'eval-source-map',
     devServer: {
       historyApiFallback: true,
@@ -56,7 +56,7 @@ if(TARGET === 'start' || !TARGET) {
 
 }
 
-if (TARGET === 'build' || TARGET === 'stats') {
+if ( TARGET === 'build' || TARGET === 'stats' || (/^deploy.*$/.test(TARGET)) ) {
 
   module.exports = merge(common, {
     devtool: 'source-map',
