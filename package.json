@@ -59,9 +59,6 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint src && jscs src",
-    "deploy-gh-pages": "node ./tools/deploy-gh-pages.js",
-    "test": "karma start",
-    "tdd": "karma start --auto-watch --no-single-run",
-    "flow": "flow check"
+    "deploy-gh-pages": "node ./tools/deploy-gh-pages.js"
   }
 }
