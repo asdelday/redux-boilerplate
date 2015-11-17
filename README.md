@@ -3,7 +3,6 @@ redux-boilerplate
 
 A simple React starter boilerplate
 
----
 ### Table of Contents
 1. [Installation](#installation)
 2. [Developing](#start)
@@ -12,6 +11,7 @@ A simple React starter boilerplate
    * 3.2. [Building with stats](#stats)
 4. [Linting](#lint)
 5. [Dependencies](#dependencies)
+
 ---
 
 <div id="installation"></div>
